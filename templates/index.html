@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <!-- Basic Page Needs
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>DevMash</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Mobile Specific Metas
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <!-- FONT
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono|Raleway:900" rel="stylesheet">
+    <!-- CSS
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/skeleton.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
+
+    <!-- Favicon
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+    <!-- Scripts
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+    <script src="https://use.fontawesome.com/14779ae62f.js"></script>
+    <script src="{% static 'js/materialize.min.js' %}"></script>
+    <script src="{% static 'js/flowtype.js' %}"></script>
+    <script src="{% static 'js/jquery.scrollify.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/register.js' %}"></script>
+
+</head>
+
+<body>
+
+
+
+    <!-- Navigation Bar
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="nav animated fadeInDown">
+        <div id="nav-btns">
+            <a href="#form">Register</a>
+            <a href="#team">Mentors</a>
+            <a href="#three">Tracks</a>
+            <a href="#LandingPage">Home</a>
+        </div>
+    </div>
+    <!-- Landing Page
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section id="LandingPage" class="section scrollspy" data-section-name="LandingPage">
+    {{message}}
+        <div class="landingImageWrapper">
+            <img src="{% static 'images\logo.svg' %}" class="animated flipInY" />
+
+        </div>
+
+        <a class="arrow-wrap" onclick="  $.scrollify.next();">
+            <i class="fa fa-3x fa-angle-down animated fadeInDown" aria-hidden="true"></i>
+        </a>
+    </section>
+
+
+
+
+    <!-- Second Page
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section id="second" data-section-name="second">
+        <div class="opt-content row valign-wrapper">
+            <img src="{% static 'images\2-tracks.svg' %}" alt="" />
+        </div>
+        <a class="arrow-wrap" onclick="  $.scrollify.next();">
+            <i class="fa fa-3x fa-angle-down animated fadeInDown" aria-hidden="true"></i>
+        </a>
+    </section>
+
+    <!-- Third Page
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section id="three" class="course-track valign-wrapper section scrollspy" data-section-name="course">
+        <div class="opt-content row valign">
+            <div class="four columns invisible"><img class="course-logo" src="{% static 'images/android-white.svg' %}" style="max-width: 260px;"></div>
+            <div class="eight columns invisible">
+                <p>Android is the world's most popular mobile OS. WIth over 1 Billion daily active users, writing apps for Android is an in-demand skill. In this course you will learn all about the concepts which are unique to the Andoid platform.
+                </p>
+                <a href="#form" class="button invisible">Apply Now</a>
+            </div>
+        </div>
+        <a class="arrow-wrap" onclick="  $.scrollify.next();">
+            <i class="fa fa-3x fa-angle-down animated fadeInDown" aria-hidden="true"></i>
+        </a>
+    </section>
+
+    <!-- Fourth Page
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section id="four" class="course-track valign-wrapper " data-section-name="course">
+        <div class="opt-content row valign">
+            <div class="four columns invisible"><img class="course-logo" src="{% static 'images/python-white.svg' %}" style="max-width: 260px;"></div>
+            <div class="eight columns invisible">
+                <p>Python is one of the most popular languages among beginners. Due it's fast adoption and clean syntax, Python finds use in a lot of places, from tech giants like Google and Facebook, all the way to Disney and NASA. Join us to learn the
+                    language and develop web apps using the Django framework
+                </p>
+                <a href="#form" class="button invisible">Apply Now</a>
+            </div>
+        </div>
+        <a class="arrow-wrap" onclick="  $.scrollify.next();">
+            <i class="fa fa-3x fa-angle-down animated fadeInDown" aria-hidden="true"></i>
+        </a>
+    </section>
+
+    <!-- Fifth Page
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section id="five" class="course-track valign-wrapper " data-section-name="course">
+        <div class="opt-content row valign">
+            <div class="four columns invisible"><img class="course-logo" src="{% static 'images/web-white.svg' %}" style="max-width: 260px;"></div>
+            <div class="eight columns invisible">
+                <p>The web has been around for decades and is one of the most dominant platforms for writing software. Web requires a mrriage of a lot of disciplines like Design, Engineering, Security etc. Join us as we walk you through the process of writing
+                    performant web apps that work across devices and look great.
+                </p>
+                <a href="#form" class="button invisible">Apply Now</a>
+            </div>
+        </div>
+        <a class="arrow-wrap" onclick="  $.scrollify.next();">
+            <i class="fa fa-3x fa-angle-down animated fadeInDown" aria-hidden="true"></i>
+        </a>
+    </section>
+    <section id="team" class="valign-wrapper section scrollspy" data-section-name="team">
+        <div class="row outer">
+            <div class="three columns mContent">
+                <div class="">
+                    <img class="invisible mentorsImage" src="{% static 'images\prateek.jpg' %}" />
+                </div>
+                <div class="">
+                    <h5 class="invisible mentorsName">Prateek Prasad</h5>
+                    <div class="titleContainer">
+                        <a href="https://twitter.com/hackertronix" target="_blank"><h6 class="invisible mTitle">Android Developer</h6></a>
+                        <a href="https://github.com/hackertronix" target="_blank"><h6 class="invisible mTitle">Interaction Designer</h6></a>
+                    </div>
+                </div>
+
+                <div class="inner">
+                    <i class="fa invisible fa-twitter"></i>
+                    <i class="fa invisible fa-github"></i>
+                </div>
+            </div>
+            <div class="three columns mContent">
+                <div class="">
+                    <img class="invisible mentorsImage" src="{% static 'images\sid.jpg' %}" />
+                </div>
+                <div class="">
+                    <h5 class="invisible mentorsName">Sidharth Kumar</h5>
+                    <div class="titleContainer">
+                        <h6 class="invisible mTitle">Python Developer</h6>
+                        <h6 class="invisible mTitle">Backend WebDeveloper</h6>
+                    </div>
+                </div>
+
+                <div class="inner">
+                    <a href="https://twitter.com/sidharth6323" target="_blank"><i class="fa invisible fa-twitter"></i></a>
+                    <a href="https://github.com/sidharth6323" target="_blank"><i class="fa invisible fa-github"></i></a>
+                </div>
+            </div>
+            <div class="three columns mContent">
+                <div class="">
+                    <img class="invisible mentorsImage" src="{% static 'images\rimil.jpg' %}" />
+                </div>
+                <div class="">
+                    <h5 class="invisible mentorsName">Rimil Dey</h5>
+                    <div class="titleContainer">
+                        <h6 class="invisible mTitle">FrontEnd Web Developer</h6>
+                    </div>
+                </div>
+                <div class="inner">
+                    <a href="https://twitter.com/rimildeyjsr" target="_blank"><i class="fa invisible fa-twitter"></i></a>
+                    <a href="https://github.com/rimildeyjsr" target="_blank"><i class="fa invisible fa-github"></i></a>
+                </div>
+            </div>
+            <div class="three columns mContent">
+                <div class="">
+                    <img class="invisible mentorsImage" src="{% static 'images\utkarsh.jpeg' %}" />
+                </div>
+                <div class="">
+                    <h5 class="invisible mentorsName">Utkarsh Bhimte</h5>
+                    <div class="titleContainer">
+                        <h6 class="invisible mTitle">FrontEnd Web Developer</h6>
+                    </div>
+                </div>
+                <div class="inner">
+                    <a href="https://twitter.com/Karshe95" target="_blank"><i class="fa invisible fa-twitter"></i></a>
+                    <a href="https://github.com/Utkarshbhimte/" target="_blank"><i class="fa invisible fa-github"></i></a>
+                </div>
+
+            </div>
+
+        </div>
+        <a class="arrow-wrap" onclick="  $.scrollify.next();">
+            <i class="fa fa-3x fa-angle-down animated fadeInDown" aria-hidden="true"></i>
+        </a>
+    </section>
+
+
+
+    <!-- Form
+       –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section id="form" class="container invisible  section scrollspy" data-section-name="form">
+        <form class="columns twelve container">
+                {% csrf_token %}
+            <h4>Registration Form</h4>
+            <div class="row ">
+                <div class="input-field columns six">
+                    <input placeholder="First Name" id="first_name" type="text" class="validate" name="f_name">
+                </div>
+                <div class="input-field columns six">
+                    <input placeholder="Last Name" id="last_name" type="text" class="validate" name="l_name">
+                </div>
+            </div>
+            <div class="row valign-wrapper">
+                <div id="gender" class="columns six row valign">
+                    <p class="columns six ">
+                        <input name="group1" type="radio" id="test1" />
+                        <label for="test1">Male</label>
+                    </p>
+                    <p class="columns six valign">
+                        <input name="group1" type="radio" id="test2" />
+                        <label for="test2">Female</label>
+                    </p>
+                </div>
+                <div class="input-field columns six">
+                    <input placeholder="Contact No." id="mobile" type="tel" class="validate" name="mobile">
+                </div>
+            </div>
+            <a href="#form2" class="button">Next</a>
+        </form>
+    </section>
+    <section id="form2" class="  container" data-section-name="form">
+        <form class="columns twelve container invisible">
+        {% csrf_token %}
+            <div class="row">
+                <div class="input-field columns six">
+                    <select id="branch" name="branch">
+                        <option value="" disabled selected>Branch</option>
+                        <option value="CS">CS</option>
+                        <option value="IS">IS</option>
+                        <option value="ECE">ECE</option>
+                        <option value="IT">IT</option>
+                        <option value="EEE">EEE</option>
+                        <option value="MECH">MECH</option>
+                        <option value="CIVIL">CIVIL</option>
+                    </select>
+                </div>
+                <div class="input-field columns six">
+                    <input placeholder="USN" name="usn" id="usn" type="text" class="validate">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field columns six">
+                    <select id="course" name="course">
+                        <option value="" disabled selected>Course Track</option>
+                        <option value="Android">Android Development</option>
+                        <option value="FrontEnd">FrontEnd Web Development</option>
+                        <option value="Python">Python</option>
+                    </select>
+                </div>
+                <div class="input-field columns six">
+                    <input name="github" placeholder="Github" id="github" type="text" class="validate">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field columns six">
+                    <select id="year" name="year">
+                        <option value="" disabled selected>Year</option>
+                        <option value="I">I</option>
+                        <option value="II">II</option>
+                        <option value="III">III</option>
+                        <option value="IV">IV</option>
+                    </select>
+                </div>
+                <div class="input-field columns six">
+                    <input placeholder="Email" name="email" id="email" type="email" class="validate">
+                </div>
+            </div>
+            <a id="register" class="button">Register</a>
+        </form>
+        <footer class="invisible">
+            <h6>Developed By <strong style="font-weight : bold">Utkarsh Bhimte</strong>.<br class="mobile-only"> Design by <strong style="font-weight : bold">Prateek Prasad</strong>.</h6>
+        </footer>
+    </section>
+
+
+
+
+    <!-- End Document –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+</html>
